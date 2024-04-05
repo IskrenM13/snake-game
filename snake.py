@@ -63,3 +63,9 @@ class Snake:
             self.segments[0].shape('right.gif')
             for segment in self.segments[1:]:
                 segment.shape("horbody.gif")
+
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000,1000)
+        self.segments.clear()
+        self.create_snake()
